@@ -1,75 +1,99 @@
-
 package PriceChecker;
 
 import java.io.Serializable;
 import javax.persistence.*;
 
-/** Represents a TV.
-    Java annotation is used for the mapping. 
-*/
+/**
+ * Represents a TV. Java annotation is used for the mapping.
+ */
 @Entity
-@Table(name = "tvs")
+@Table(name = "tv")
 public class TV implements Serializable {
-    @Id 
+
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
-    
-    @Column(name = "product_type_id")
-    private int productTypeId;
-    
-    @Column(name = "price_id")
-    private int priceId;
-    
+
+    @Column(name = "brand")
+    private String brand;
+
+    @Column(name = "model")
+    private String model;
+
+    @Column(name = "screen_size")
+    private String screenSize;
+
+    @Column(name = "description")
+    private String description;
+
     @Column(name = "image_url")
     private String imageURL;
-    
-    @Column(name = "direct_url")
-    private String directURL;
-    
-    /** Empty constructor */
-    public TV(){
+
+    /**
+     * Empty constructor
+     */
+    public TV() {
     }
-    
+
     //Getters
     public int getId() {
         return id;
     }
-    public int getProductTypeId() {
-        return productTypeId;
+
+    public String getBrand() {
+        return brand;
     }
-    public float getPriceId() {
-        return priceId;
+
+    public String getModel() {
+        return model;
     }
+
+    public String getScreenSize() {
+        return screenSize;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
     public String getImageURL() {
         return imageURL;
     }
-    public String getDirectURL() {
-        return directURL;
-    }
-    
+
     // Setters
     public void setId(int id) {
         this.id = id;
     }
-    public void setProductTypeId(int productTypeId) {
-        this.productTypeId = productTypeId;
+
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
-    public void setPriceId(int priceId) {
-        this.priceId = priceId;
+
+    public void setModel(String model) {
+        this.model = model;
     }
+
+    public void setScreenSize(String screenSize) {
+        this.screenSize = screenSize;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public void setImageURL(String imageURL) {
         this.imageURL = imageURL;
     }
-    public void setDirectURL(String directURL) {
-        this.directURL = directURL;
-    }
-        
-    /** Returns a String representation of the TV
-     * @return  */
+
+    /**
+     * Returns a String representation of the TV
+     *
+     * @return
+     */
     @Override
-    public String toString(){
-        String str = "TV. id: " + id + "; productTypeId: " + productTypeId + "; priceId: " + priceId + "; imageURL: " + imageURL + "; directURL: " + directURL;
+    public String toString() {
+        String str = "TV. id: " + id + "; brand: " + brand + "; model: " + model + "; screen size: " + screenSize + "; description: " + description + "image URL: " + imageURL;
         return str;
-    } 
+    }
 }

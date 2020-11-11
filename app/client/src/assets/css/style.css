@@ -68,12 +68,17 @@ a:focus {
 	text-decoration: none;
 	outline: none;
 	color: #fff;
+	cursor: pointer;
 }
 
 ul,
 ol {
 	padding: 0;
 	margin: 0;
+}
+
+.primary-btn:hover {
+	color: #212529;
 }
 
 /*---------------------
@@ -1202,4 +1207,27 @@ ol {
 
 button {
 	cursor:pointer
+}
+
+table, thead, th, tr, td, v-th {
+	text-align: center;
+}
+.vt-sort:before{
+    font-family: FontAwesome;
+    padding-right: 0.5em;
+    width: 1.28571429em;
+    display: inline-block;
+    text-align: center;
+}
+
+.vt-sortable:before{
+    content: "";
+}
+
+.vt-asc:before{
+    content: "🔽";
+}
+
+.vt-desc:before{
+    content: "🔼";
 }

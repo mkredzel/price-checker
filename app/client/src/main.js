@@ -6,7 +6,9 @@ import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'vue-loading-overlay/dist/vue-loading.css'
+import SmartTable from 'vuejs-smart-table'
 
+Vue.use(SmartTable)
 Vue.use(BootstrapVue)
 Vue.config.productionTip = false
 

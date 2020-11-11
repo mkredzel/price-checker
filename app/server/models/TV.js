@@ -2,21 +2,22 @@ const Sequelize = require("sequelize");
 const sequelize = require("../database/connection");
 
 const TV = sequelize.define(
-  "tvs",
+  "tv",
   {
     id: {
       type: Sequelize.INTEGER(11),
       allowNull: false,
       autoIncrement: true,
-      primaryKey: true
+      primaryKey: true,
     },
-    product_type_id: Sequelize.INTEGER(11),
-    price_id: Sequelize.INTEGER(11),
+    brand: Sequelize.INTEGER(255),
+    model: Sequelize.INTEGER(255),
+    screen_size: Sequelize.STRING(6),
+    description: Sequelize.TEXT,
     image_url: Sequelize.STRING(2083),
-    direct_url: Sequelize.STRING(2083),
   },
   {
     timestamps: false,
-  },
+  }
 );
 module.exports = TV;

@@ -17,7 +17,6 @@
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <!-- Mapping with annotation - specify the annotated classes here -->
     <mapping class="PriceChecker.TV" file="" jar="" package="" resource=""/>
-    <mapping class="PriceChecker.Price"/>
-    <mapping class="PriceChecker.ProductType"/>
+    <mapping class="PriceChecker.Comparison" file="" jar="" package="" resource=""/>
   </session-factory>
 </hibernate-configuration>

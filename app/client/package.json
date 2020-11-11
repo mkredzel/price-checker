@@ -19,6 +19,7 @@
     "vue-owl-carousel": "^2.0.3",
     "vue-router": "^3.2.0",
     "vuejs-autocomplete": "^0.1.1",
+    "vuejs-smart-table": "0.0.5",
     "vuex": "^3.4.0"
   },
   "devDependencies": {
