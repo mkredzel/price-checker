@@ -72,7 +72,7 @@ public class TVScraper4 extends Thread {
                             screenSize += "\"";
                         }
 
-                        if ("".equals(descriptionText.text()) || "HD\"".equals(screenSize) || "HD\"".equals(screenSize) || "Full".equals(screenSize) || "Inch".equals(screenSize)) {
+                        if ("".equals(descriptionText.text()) || "HD\"".equals(screenSize) || "4K\"".equals(screenSize) || "HD\"".equals(screenSize) || "Full".equals(screenSize) || "Frame".equals(screenSize) || "Inch".equals(screenSize)) {
                             System.out.println("Unable to add record to DB - invalid data");
                         } else {
                             //Add TVs to DB using Hibernate

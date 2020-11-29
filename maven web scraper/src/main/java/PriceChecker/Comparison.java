@@ -4,7 +4,7 @@ import java.io.Serializable;
 import javax.persistence.*;
 
 /**
- * Represents a ProductType. Java annotation is used for the mapping.
+ * Represents a Comparison. Java annotation is used for the mapping.
  */
 @Entity
 @Table(name = "comparison")

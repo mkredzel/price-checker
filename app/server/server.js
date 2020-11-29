@@ -14,7 +14,6 @@ TV.hasMany(Comparison, { foreignKey: "tv_id" });
 // Body-parser for forms
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
 // DB Connection
 require("./database/connection");
 
@@ -59,7 +58,7 @@ app.get("/*", handleGetRequest);
 // PORT setup
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, console.log(`Server started on port ${PORT}`));
+const server = app.listen(PORT, console.log(`Server started on port ${PORT}`));
 
 // Handles GET requests to our web service
 function handleGetRequest(req, res) {
@@ -135,3 +134,5 @@ function handleGetRequest(req, res) {
     res.send(tvsArray);
   } else res.send("error: Path not recognized");
 }
+
+module.exports = server;

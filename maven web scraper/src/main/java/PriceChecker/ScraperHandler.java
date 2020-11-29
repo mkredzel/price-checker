@@ -1,28 +1,41 @@
 package PriceChecker;
 
+import java.util.List;
+
 public class ScraperHandler {
+
+    private static List<Thread> scraperList;
 
     //Empty constructor
     ScraperHandler() {
     }
 
-    public void startThreads() {
-        new Thread(new TVScraper1()).start();
-        new Thread(new TVScraper2()).start();
-        new Thread(new TVScraper3()).start();
-        new Thread(new TVScraper4()).start();
-        new Thread(new TVScraper5()).start();
+    //Getter
+    public static List<Thread> getScraperList() {
+        return scraperList;
     }
 
+    //Setter
+    public static void setScraperList(List<Thread> sList) {
+        scraperList = sList;
+    }
+
+    //Start TVScrapers
+    public void startThreads() {
+        for (Thread TVScraper : scraperList) {
+            TVScraper.start();
+        }
+    }
+
+    //Join TVScrapers
     public void joinThreads() {
-        try {
-            new Thread(new TVScraper1()).join();
-            new Thread(new TVScraper2()).join();
-            new Thread(new TVScraper3()).join();
-            new Thread(new TVScraper4()).join();
-            new Thread(new TVScraper5()).join();
-        } catch (InterruptedException ex) {
-            System.err.println(ex.getMessage());
+        for (Thread TVScraper : scraperList) {
+
+            try {
+                TVScraper.join();
+            } catch (InterruptedException ex) {
+                System.err.println(ex.getMessage());
+            }
         }
     }
 }
