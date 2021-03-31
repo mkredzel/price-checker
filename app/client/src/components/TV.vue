@@ -49,10 +49,9 @@
                 alt="product"
               />
               <h3>{{ tv.brand }} {{ tv.screen_size }}</h3>
-              <ul>
-                <h4 id="fitText">{{ tv.model }}</h4>
-                <h5 id="fitText">{{ tv.description }}</h5>
-              </ul>
+
+              <h4 id="tvModel">{{ tv.model }}</h4>
+              <h5 id="tvContent">{{ tv.description }}</h5>
               <a
                 class="primary-btn"
                 @click="indexOfChosenTV = tv.id"
@@ -176,7 +175,7 @@ export default {
   mounted() {
     this.getComparison();
     this.getTVs();
-  },  
+  },
   computed: {
     rows() {
       return this.tvs.length;

@@ -2,7 +2,7 @@
 const Sequelize = require("sequelize");
 
 const sequelize = new Sequelize("pricechecker", "root", "", {
-  host: "127.0.0.1",
+  host: "localhost",
   dialect: "mysql",
   operatorAliases: false,
   define: { 

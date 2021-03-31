@@ -48,7 +48,7 @@ export default {
       "random": false,
       "anim": {
         "enable": false,
-        "speed": 1,
+        "speed": 2,
         "opacity_min": 0.1,
         "sync": false
       }
@@ -67,12 +67,12 @@ export default {
       "enable": true,
       "distance": 150,
       "color": "#ffffff",
-      "opacity": 0.4,
+      "opacity": 0.2,
       "width": 1
     },
     "move": {
       "enable": true,
-      "speed": 6,
+      "speed": 5,
       "direction": "none",
       "random": false,
       "straight": false,
